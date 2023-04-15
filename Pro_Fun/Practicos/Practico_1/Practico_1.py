@@ -18,7 +18,7 @@ def plus_arrays(arrays, function):
     return suma
 
 
-print(f'suma - números menores a 22: plus_arrays([a, b], number_22)')
+print(f'suma - números menores a 22: {plus_arrays([a, b], number_22)}')
 
 
 """
@@ -30,7 +30,7 @@ precios = [100, 100, 100]
 
 
 def add_iva(precio):
-    return precio *  1.13
+    return precio * 1.13
 
 
 def add_iva_to_list(array, function_iva):
@@ -51,17 +51,22 @@ contiene y su longitud. Ejemplo: Hola Mundo, debe retornar:
 # NOTA: Para hacerlo disto al ejemplo de clases.
 frase = 'Hola Mundo'
 
+
 def get_words(frase):
     return frase.split()
+
 
 def get_word_len(word):
     return (word, len(word))
 
+
 def get_dict_words_len(words, def_get_word_len):
     return dict(def_get_word_len(word) for word in words)
+
 
 def count_len_words(frase, def_get_word, def_get_dict_words_len, def_get_word_len):
     words = def_get_word(frase)
     return def_get_dict_words_len(words, def_get_word_len)
+
 
 print(count_len_words(frase, get_words, get_dict_words_len, get_word_len))
