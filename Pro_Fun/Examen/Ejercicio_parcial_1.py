@@ -30,3 +30,21 @@ alumno = {'Programación 1': 51, 'Base de Datos': 60,
 
 print(get_notas_aprobadas_upper(alumno, convertir_mayusculas,
       es_aprobado))
+
+"""
+Resuelto por el profesor.
+"""
+def to_upper(word):
+    return word.upper()
+
+def is_approved_in_tuple(group, minimun_grade=51):
+    if group[i] >= minimun_grade:
+        return group
+
+def approved_grades(grades, capital_funtion, approved_function):
+    name = list(map(capital_funtion, grades.keys()))
+    grades_tuple = zip(name, grades.values())
+    print(grades_tuple)
+    return dict(filter(approved_function, grades_tuple))
+
+print(approved_grades(alumno, to_upper, is_approved_in_tuple))
