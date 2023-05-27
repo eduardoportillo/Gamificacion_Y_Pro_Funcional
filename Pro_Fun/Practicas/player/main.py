@@ -10,6 +10,7 @@ if __name__ == '__main__':
     }
     versions = ['1.0']
 
+# implement get_player_feature
     current_points = apply_player_action({
         'function': get_player_feature,
         'params': {
@@ -28,6 +29,7 @@ if __name__ == '__main__':
     print(f'El jugador 1 tiene {current_points} puntos')
     print('El jugador 1 recibe la placa de explorador')
 
+    # implement update_player_feature
     states, versions = apply_player_action({
         'function': update_player_feature,
         'params': {
@@ -44,24 +46,6 @@ if __name__ == '__main__':
             })
         }
     })  # states, versions = update_player_info(states, versions, 25, ['Explorador'], get_last_version(versions))
-
-    print(f'añadiendo nuevo badge')
-    states, versions = apply_player_action({
-        'function': update_player_feature,
-        'params': {
-            'states': states,
-            'versions': versions,
-            'username': 'edwardfc',
-            'feature': 'badges',
-            'value': ['Novato'],
-            'version': apply_player_action({
-                'function': get_current_version,
-                'params': {
-                    'versions': versions
-                }
-            })
-        }
-	})
 
     current_badges = apply_player_action({
         'function': get_player_feature,
