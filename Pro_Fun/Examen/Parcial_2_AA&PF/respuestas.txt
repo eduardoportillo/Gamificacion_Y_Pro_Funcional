@@ -1,0 +1,11 @@
+1.- ¿Qué es una función recursiva?
+Una función recursiva es una función que se llama a sí misma. Es decir, una función que se llama a sí misma durante su ejecución. 
+El término se aplica también a la definición de objetos y estructuras de datos cuando se definen en términos de sí mismos.
+
+2.- ¿Cómo podemos mejorar le eficiencia de una función recursiva?
+la funciones recursiva se pude mejorar si usamos técnicas como la memoización.
+
+3.- ¿Qué elementos se consideran para evaluar la complejidad de un algoritmo?
+el coste algorítmico.
+
+4.- A través de ejemplos muestre los niveles de complejidad más comunes, es decir, aquellos que se obtienen generalmente al escribir un algoritmo o función.
