@@ -1,0 +1,41 @@
+{
+  "name": "servisofts-terminal",
+  "version": "1.0.3",
+  "description": "servisofts-terminal is a library for React Native Web.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": {
+    "username": "eduardoportillov",
+    "name": "servisofts-terminal",
+    "email": "eportillovirreira@gmail.com"
+  },
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*",
+    "servisofts-component": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.17",
+    "@types/react-native": "^0.61.17",
+    "typescript": "^4.1.3",
+    "servisofts-component": "2.11.14"
+  },
+  "scripts": {
+    "up": "npm run build && cd dist && npm publish",
+    "start": "rm -rf dist && mkdir dist && rsync -rv --exclude-from=./.copyignore ./ dist/ && tsc -p ./run.tsconfig.json",
+    "build": "rm -rf dist  && mkdir dist  && rsync -rv --exclude-from=./.copyignore ./ dist/ && tsc -p ./tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "*",
+    "**"
+  ]
+}
