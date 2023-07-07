@@ -1,0 +1,17 @@
+DIR_SERVICES="/home/servisofts/servicios"
+#DIR_BACKUPS="/home/servisofts/repo/resources/home/servisofts/servicios"
+DIR_BACKUPS="/mnt/externo/BACKUPS/"
+
+# sudo su
+
+# echo "Backup... "
+
+cd $DIR_SERVICES
+# mkdir -p $DIR_BACKUPS
+current_date=$(date +"%Y-%m-%d_%H-%M")
+for d in $(ls -d */ | cut -f1 -d'/'); do
+    ms_name=${d%%/}
+    mkdir -p "$DIR_BACKUPS/$ms_name"
+    cd "$DIR_BACKUPS/$ms_name"
+    sudo tar -czvf "$ms_name-$current_date.tgz" --directory "$DIR_SERVICES/" ./$ms_name
+done
